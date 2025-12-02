@@ -1,0 +1,64 @@
+name: "Баг-репорт"
+description: "Сообщите о проблеме"
+title: "[BUG]: "
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за ваш отчет! Пожалуйста, заполните поля ниже.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Краткое описание
+      placeholder: Коротко опишите проблему
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Подробное описание
+      placeholder: Опишите, что произошло
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги для воспроизведения
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Логи / вывод консоли
+      render: shell
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Операционная система
+      options:
+        - Linux
+        - Windows
+        - macOS
+
+  - type: input
+    id: version
+    attributes:
+      label: Версия программы
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Проверка
+      options:
+        - label: Я проверил, что проблема ещё актуальна в последней версии
+          required: true
