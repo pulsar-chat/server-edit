@@ -1,0 +1,28 @@
+name: "Запрос новой функции"
+description: "Предложите улучшение"
+title: "[FEATURE]: "
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за ваше предложение!
+
+  - type: input
+    id: summary
+    attributes:
+      label: Кратко
+      placeholder: Что нужно добавить?
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Подробности
+      placeholder: Опишите, зачем нужна функция
+
+  - type: textarea
+    id: alternative
+    attributes:
+      label: Альтернативы
+      placeholder: Какие еще варианты вы рассматривали?
